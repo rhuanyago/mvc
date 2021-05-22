@@ -5,6 +5,10 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Http\Router;
 use \App\Utils\View;
+use \WilliamCosta\DotEnv\Environment;
+
+//CARREGA VARIÁVEIS DE AMBIENTE
+Environment::load(__DIR__);
 
 define('URL', 'http://localhost/mvc');
 
