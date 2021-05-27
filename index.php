@@ -1,11 +1,11 @@
 <?php
 
 require __DIR__.'/vendor/autoload.php';
-
+// require __DIR__.'/app/bootstrap/app.php';
 
 use \App\Http\Router;
 use \App\Utils\View;
-use \WilliamCosta\DotEnv\Environment;
+use \App\Common\Environment;
 
 //CARREGA VARIÁVEIS DE AMBIENTE
 Environment::load(__DIR__);
