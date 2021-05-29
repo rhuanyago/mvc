@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '56fb04d64d9a3e58e87d26e563384efa7d69bc77',
+    'reference' => 'c378fedbd37ee8c9dbe13a26c2331d2a160b2ce8',
     'name' => 'wdev/mvc',
   ),
   'versions' => 
@@ -18,7 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '56fb04d64d9a3e58e87d26e563384efa7d69bc77',
+      'reference' => 'c378fedbd37ee8c9dbe13a26c2331d2a160b2ce8',
+    ),
+    'william-costa/database-manager' => 
+    array (
+      'pretty_version' => 'v0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ed871363f27251a882b9e5dc036dcac566b271c4',
     ),
     'william-costa/dot-env' => 
     array (
