@@ -1,21 +1,9 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
-// require __DIR__.'/app/bootstrap/app.php';
+// require __DIR__.'/boott/autoload.php';
+require __DIR__.'/bootstrap/app.php';
 
 use \App\Http\Router;
-use \App\Utils\View;
-use \App\Common\Environment;
-
-//CARREGA VARIÁVEIS DE AMBIENTE
-Environment::load(__DIR__);
-
-define('URL', 'http://localhost/mvc');
-
-//DEFINE O VALOR PADRÃO DAS VARIÁVEIS
-View::init([
-    'URL' => URL
-]);
 
 //INICIA O ROUTER
 $obRouter = new Router(URL);
@@ -26,10 +14,3 @@ include __DIR__.'/routes/pages.php';
 $obRouter->run()
          ->sendResponse();
 
-// echo "<pre>";
-// print_r($obRouter);
-// echo "</pre>";
-
-// exit;
-
-// echo Home::getHome();
