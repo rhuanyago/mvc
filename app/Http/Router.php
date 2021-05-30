@@ -4,7 +4,8 @@ namespace App\Http;
 
 use \Closure;
 use \Exception;
-USE \ReflectionFunction;
+use \ReflectionFunction;
+use \App\Http\Middleware\Queue as MiddlewareQueue;
 
 class Router
 {
@@ -70,6 +71,10 @@ class Router
             }
         }
 
+        //MIDDLEWARES DA ROTA
+        $params['middlewares'] = $params['middlewares'] ?? [];
+       
+
         //VARIÁVEIS DA ROTA
         $params['variables'] = [];
 
@@ -88,9 +93,7 @@ class Router
 
         $this->routes[$patternRoute][$method] = $params;
 
-        // echo "<pre>";
-        // print_r($patternRoute);
-        // echo "</pre>"; 
+        
     }
 
     /**
@@ -218,8 +221,8 @@ class Router
                 $args[$name] = $route['variables'][$name] ?? '';
             }
 
-            //RETORNA A EXECUÇÃO DA FUNÇÃO
-            return call_user_func_array($route['controller'], $args);
+            //RETORNA A EXECUÇÃO DA FILA DE MIDDLEWARES
+            return (new MiddlewareQueue($route['middlewares'], $route['controller'], $args))->next($this->request);
 
         } catch (Exception $e) {
             return new Response($e->getCode(), $e->getMessage());
