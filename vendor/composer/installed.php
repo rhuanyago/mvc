@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'c378fedbd37ee8c9dbe13a26c2331d2a160b2ce8',
+    'reference' => '433e876bd24645150fc3f6baebdd527af283cc9a',
     'name' => 'wdev/mvc',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'c378fedbd37ee8c9dbe13a26c2331d2a160b2ce8',
+      'reference' => '433e876bd24645150fc3f6baebdd527af283cc9a',
     ),
     'william-costa/database-manager' => 
     array (
